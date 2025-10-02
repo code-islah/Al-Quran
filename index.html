@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content=" ">
+  <meta name="description" content=" ">
+  <meta name="keywords" content=" ">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="">
+  <title>Al Quran App</title>
+</head>
+
+<body>
+  <div class="container p-1">
+    <div class="initialLoadingOverlay">
+      <h1>
+        القرآن الكريم
+      </h1>
+      <div>
+        <span class="loadingIndicator"></span>
+        <p>@code-islah</p>
+      </div>
+      <div class="loadingInfo">
+        <p>Checking local storage...</p>
+        <p>Fetching Quran data...</p>
+        <p>Loading UI...</p>
+        </div>
+      </div>
+    <!-- Settings Window -->
+    <div class="d-flex justify-space-between align-items-center">
+      <h1 class="text-center p-1">Al Quran</h1>
+      <button class="navBtn">
+        <div class="navIcon"></div>
+      </button>
+      <div class="window">
+        <form name="settingForm">
+          <div class="d-flex justify-space-between">
+            <h2>Settings</h2>
+            <span class="closer fs-200 d-grid place-content-center">&times;</span>
+          </div>
+          <div>
+            <label for="font">Choose font</label>
+            <select name="font" id="font" class="outline m-top-1">
+              <option name="" id="">KFGQPC Uthmanic</option>
+              <option name="" id="">Quran Web Regular</option>
+              <option name="" id="">Jannat LT</option>
+              <option name="" id="">DecoType Naskh</option>
+            </select>
+          </div>
+
+          <div class="d-flex">
+            <label class="w-100" for="fontSize">Change font size:</label>
+            <input class="w-75 fs-80" type="number" name="fontSize" id="fontSize" placeholder="Ex. 14px">
+          </div>
+
+
+          <div class="d-flex justify-space-between">
+            <label for="theme">Choose theme</label>
+            <div id="theme">&nbsp;</div>
+          </div>
+
+          <div class="d-flex">
+            <label for="">Sort By:</label>
+            <div class="d-flex m-right">
+              <button class="fs-80">Type - Meccan/Medinan</button>
+              <button class="fs-80">Alphabetically</button>
+            </div>
+          </div>
+          <div class="d-flex">
+            <label class="w-75" for="">Ayah Length :</label>
+            <div class="d-flex gap-50">
+              <input class="w-100 fs-80" type="text" placeholder="Ex. 50">
+              <input class="w-100 fs-80" type="text" placeholder="Ex. 286">
+            </div>
+          </div>
+          <div>
+            <div class="d-flex">
+              <p class="w-50">Total Chapter : 114</p>
+              <p>Total Verses : 6236</p>
+            </div>
+            <div class="d-flex">
+              <p class="w-50">Meccan :</p>
+              <p>Medinan: </p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center gap-100 align-items-center">
+            <button type="submit">Save</button>
+            <button type="reset">Clear</button>
+            <button class="clear">Reset App & Save</button>
+          </div>
+          <p class="text-center m-top-3">Created with ♥️ by Md Alamin</p>
+        </form>
+      </div>
+    </div>
+    <div class="ayahSearchSection">
+      <input type="text" name="ayahSearch" id="ayahSearch" placeholder="Enter Ayah...">
+      <select name="langSelect" id=langSelect>
+        <option value="">AR</option>
+        <option value="">BN</option>
+        <option value="">EN</option>
+      </select>
+      <button class="searchSubmit"><img src="/img/search.svg" alt="Search"/></button>
+    </div>
+    <div class="quranResult m-top-1">
+      <!-- Quran may appear here, inshaAllah -->
+    </div>
+    <div class="tools d-grid m-top-3">
+      <div class="pos-rel icons d-flex justify-content-center gap-200 align-items-center">
+        <span class="resultItemsCount fs-80 pos-ab top-0 left-0"></span>
+        <img src="/img/left.svg" alt="">
+        <img class="playPause" src="/img/playBtn.svg" alt="">
+        <img src="/img/right.svg" alt="">
+        <div class="autoScroll">
+          <img src="/img/scroll.svg" alt="">
+        </div>
+
+        <div class="afterSearchIcons pos-ab right-0" data-currentTarget>
+          <img src="/img/up.svg" alt="">
+          <img src="/img/down.svg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

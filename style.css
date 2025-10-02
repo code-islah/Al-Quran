@@ -1,0 +1,711 @@
+/* Fonts */
+
+@font-face {
+  font-family: QuranicArabic;
+  src: url("/fonts/Al Qalam Quran Majeed Web Regular.ttf");
+}
+
+@font-face {
+  font-family: jannatLT;
+  src: url("/fonts/JannaLTBold.ttf");
+}
+
+@font-face {
+  font-family: decoType;
+  src: url("/fonts/DecoType Naskh regular.ttf");
+}
+
+@font-face {
+  font-family: Uthmanic;
+  src: url("/fonts/KFGQPC Uthmanic Script HAFS Regular.otf");
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+textarea,
+select,
+option {
+  font: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+label {
+  margin: 0;
+}
+
+input,
+button,
+select,
+option {
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, .2) !important;
+}
+
+input:focus {
+outline: 4px solid rgba(0, 0, 0, .15);
+background-color: rgba(255, 255, 255, .15);
+color: #fff;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+body {
+  background: deepskyblue;
+  font: 400 .9rem/1.5;
+  font-family: jannatLT, sans-serif;
+}
+
+:target {
+  border: 1.5px solid rgba(0, 0, 0, .1) !important;
+  background: rgba(0, 0, 0, .3) !important;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, .2) inset !important;
+}
+
+.dummyChecker {
+  outline: 1px solid red;
+}
+
+.fs-50 {
+  font-size: .5rem
+}
+
+.fs-80 {
+  font-size: .8rem;
+}
+
+.fs-100 {
+  font-size: 1rem;
+}
+
+.fs-200 {
+  font-size: 1.5rem;
+}
+
+.fs-300 {
+  font-size: 2rem;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.m-right {
+  margin: 0 0 0 auto;
+}
+
+.m-left {
+  margin: 0 auto 0 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-ab {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: end
+}
+
+.justify-self-end {
+  justify-self: end
+}
+
+.justify-space-between {
+  justify-content: space-between !important;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.gap-50 {
+  gap: 5px;
+}
+
+.gap-100 {
+  gap: 10px
+}
+
+.gap-200 {
+  gap: 15px
+}
+
+.gap-300 {
+  gap: 20px
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.p-2 {
+  padding: 15px;
+}
+
+.p-3 {
+  padding: 20px;
+}
+
+.p-4 {
+  padding: 25px;
+}
+
+.m-top-1 {
+  margin-top: 10px;
+}
+
+.m-top-2 {
+  margin-top: 15px;
+}
+
+.m-top-3 {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clr-text-red {
+  color: red;
+}
+
+.outline {
+  outline: 3px solid rgba(0, 0, 0, .1);
+}
+
+.container {
+  background: deepskyblue;
+  color: #fff;
+  max-width: 640px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 0 !important;
+}
+
+.initialLoadingOverlay {
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  display: grid;
+  text-align: center;
+}
+
+.initialLoadingOverlay::before {
+  content: '';
+  background: url("/img/Quran.svg") no-repeat center;
+  background-size: 250px;
+  opacity: .05;
+  position: absolute;
+  inset: 0;
+}
+
+
+.initialLoadingOverlay>h1 {
+  align-self: end;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 255, 255, .7);
+}
+
+.initialLoadingOverlay>div {
+  display: grid;
+  gap: 15px;
+  padding-bottom: .2rem;
+  align-self: end;
+}
+
+.initialLoadingOverlay .loadingIndicator {
+  align-self: end;
+  width: 90%;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 10px;
+  outline: 3px solid rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .2);
+  animation: loadedToOpen 1.5s linear forwards;
+}
+
+@keyframes loadedToOpen {
+  0% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.3) 5%);
+  }
+
+  25% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 25%, rgba(255, 255, 255, 0.3) 5%);
+  }
+
+  50% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 50%, rgba(255, 255, 255, 0.3) 5%);
+  }
+
+  75% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 75%, rgba(255, 255, 255, 0.3) 5%);
+  }
+
+  100% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 100%, rgba(255, 255, 255, 0.3) 5%);
+  }
+}
+
+.initialLoadingOverlay .loadingInfo {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  font-size: .8rem;
+  gap: 2px;
+}
+
+.initialLoadingOverlay .loadingInfo>*:first-child {
+  opacity: 0;
+  animation: loader 1.5s linear;
+}
+
+.initialLoadingOverlay .loadingInfo>*:nth-child(2) {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: loader 1.5s linear 1.2s;
+}
+
+.initialLoadingOverlay .loadingInfo >*:last-child {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: loader 1.5s linear 1.5s;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  
+  70% {opacity: 1}
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+.container .navBtn {
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, .2);
+  position: relative;
+  border-radius: 1px;
+  outline: 5px solid rgba(255, 255, 255, .2);
+}
+
+.container .navBtn .navIcon,
+.container .navBtn .navIcon::before,
+.container .navBtn .navIcon::after {
+  width: 25px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transform-origin: center;
+}
+
+.container .window {
+  transform: translateX(200%);
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  transition: all .5s ease-in-out;
+  max-width: 640px;
+  margin: 0 auto;
+  z-index: 1000 !important
+}
+
+.container .window form[name="settingForm"] select {
+  appearance: none;
+  padding: 5px;
+}
+
+
+.container .window form[name="settingForm"] div {
+  display: grid;
+  align-items: center;
+  grid-row-gap: 5px;
+}
+
+.container .window form[name="settingForm"] .closer {
+  background: rgba(255, 255, 255, .2);
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.container .window form[name="settingForm"] {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.container .window form[name="settingForm"] label {
+  font-weight: 600;
+}
+
+.container .window form[name="settingForm"] input,
+.container .window form[name="settingForm"] button {
+  padding: 5px 10px;
+  background: transparent;
+  box-shadow: -2px -2px 5px 0 rgba(255, 255, 255, .3), 2px 2px 5px 0 rgba(0, 0, 0, .2);
+  color: #fff;
+}
+
+.container .window form[name="settingForm"] input {
+  outline: 1px solid deepskyblue;
+  background: rgba(0, 0, 0, .1);
+  padding: 3px !important;
+}
+
+.container .window form[name="settingForm"] input::placeholder {
+  color: #fff;
+}
+
+.container .window div#theme {
+  padding: 0 !important;
+  border-radius: 5px;
+  width: 85px;
+  background: hotpink;
+  outline: 5px solid rgba(255, 255, 255, .3);
+  box-shadow: -3px -3px 5px 0 rgba(255, 255, 255, .3) inset, 3px 3px 5px 0 rgba(255, 255, 255, .3) inset;
+}
+
+/* Theme Templates */
+.themeTemplates {
+  background: rgba(255, 255, 255, .7);
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  outline: 5px solid rgba(255, 255, 255, .3);
+  box-shadow: -3px -3px 5px 0 rgba(255, 255, 255, .3) inset, 3px 3px 5px 0 rgba(255, 255, 255, .3) inset, 0 0 5px 5px rgba(255, 255, 255, .2);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.themeTemplates>* {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .2);
+}
+
+.themeTemplates>*:first-child {
+  background: deepskyblue;
+}
+
+.themeTemplates>*:nth-child(2) {
+  background: #000;
+}
+
+.themeTemplates>*:nth-child(3) {
+  background: #1f62ff;
+}
+
+.themeTemplates>*:nth-child(4) {
+  background: #00a120;
+}
+
+.themeTemplates>*:nth-child(5) {
+  background: #baba00;
+}
+
+.themeTemplates>*:last-child {
+  background: #b200d1;
+}
+
+/* navigator */
+.container .navBtn .navIcon::before {
+  content: "";
+  transform: translateY(10px);
+  width: 100%;
+
+}
+
+.container .navBtn .navIcon::after {
+  content: "";
+  transform: translateY(20px)
+}
+
+.ayahSearchSection {
+  display: grid;
+  grid-template-columns: 70% 15% 1fr;
+  border-radius: 5px;
+}
+
+
+.ayahSearchSection>* {
+  padding: 8px;
+  font-size: .8rem;
+  font-weight: 500;
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.ayahSearchSection>*:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ayahSearchSection>*:nth-child(2) {
+  border-radius: 0;
+  appearance: none;
+  text-align: center;
+  background: rgba(0, 0, 0, .05);
+  color: #fff;
+}
+
+.ayahSearchSection>*:last-child::before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  transform: translateX(-25%);
+  top: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .3) transparent transparent transparent;
+}
+
+.ayahSearchSection>*:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, .05);
+  color: #fff;
+  position: relative;
+}
+
+.ayahSearchSection .searchSubmit img {
+  width: 20px;
+  margin: 0 auto;
+}
+
+.quranResult {
+  position: relative;
+  max-height: 416px;
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, .1);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+  font-size: 1.41rem;
+  font-family: Uthmanic;
+}
+
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 416px;
+  background: rgba(0, 0, 0, .45);
+  backdrop-filter: blur(15px);
+  place-items: center;
+  z-index: 1000;
+  display: none;
+}
+
+.quranResult .loading::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  aspect-ratio: 1;
+  border: 10px solid deepskyblue;
+  border-left: 10px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.quranResult .verseInfo {
+  background: rgba(0, 0, 0, .25);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(15px);
+  grid-template-columns: max-content 1fr 1fr;
+  z-index: 1;
+}
+
+.quranResult .verseInfo>li {
+  font-size: .8rem;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 1px 0 5px 0 rgba(0, 0, 0, .1);
+}
+
+.quranResult .ayah {
+  background: rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, .35);
+  padding: 8px;
+  transition: all .3s;
+}
+
+.ayah .audioBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/playBtn.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 6px;
+  transform: translateY(50%);
+  width: 25px;
+  height: 25px;
+}
+
+
+.afterSearchIcons {
+  visibility: hidden;
+  display: grid;
+  outline: 3px solid rgba(255, 255, 255, .2);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, .2) inset;
+  place-items: center
+}
+
+.afterSearchIcons img {
+  width: 30px;
+  height: 30px;
+}
+
+.afterSearchIcons::after {
+  content: attr(data-currentTarget);
+  position: absolute;
+  font-size: .6rem;
+}
+
+
+/* tools */
+
+.tools .icons img {
+  width: 30px;
+}
+
+.tools .icons .playPause {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  outline: 5px solid rgba(255, 255, 255, .3);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+
+
+/* Read-Only Auto Scroll */
+
+.autoScroll {
+  position: absolute;
+  transform: translateX(100px);
+}
+
+@media (min-width: 500px) {
+  .quranResult {
+    max-height: 75vh;
+  }
+}
