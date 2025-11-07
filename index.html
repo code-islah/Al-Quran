@@ -9,7 +9,7 @@
   <meta name="keywords" content=" ">
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="/img/quran.png" type="image/x-icon">
+  <link rel="icon" href="">
   <title>Al Quran App</title>
 </head>
 
@@ -21,17 +21,59 @@
       </h1>
       <div>
         <span class="loadingIndicator"></span>
-        <p>@code-islah</p>
+        <p>@code-islah <small>2.0</small></p>
       </div>
       <div class="loadingInfo">
         <p>Checking local storage...</p>
         <p>Fetching Quran data...</p>
         <p>Loading UI...</p>
+      </div>
+    </div>
+    <!--Floating Window-->
+    <div class="floatingWindow d-grid place-content-center">
+      <div class="d-grid gap-50">
+        <select class="w-100" name="ayahName" id="ayahName">
+          <option value=""></option>
+        </select>
+        <input type="number" name="ayahNumber" id="ayahNumber">
+
+        <div class="d-flex m-top-1 justify-content-center gap-300">
+          <button class="flex-1 fs-80 go">Go</button>
+          <button class="flex-1 fs-80 clear" type="reset">Clear</button>
         </div>
       </div>
+      <div class="archiveThisAyah d-flex justify-space-between">
+        <div class="copyThisAyah"><img src="/img/copy.svg" alt=""></div>
+        <div class="bookmarkThisAyah"><img src="/img/bookmark.svg" alt=""></div>
+      </div>
+      <div class="translateBNENSeparate d-flex justify-space-between">
+        <div class="bnQuran">অ</div>
+        <div class="enQuran">A</div>
+      </div>
+    </div>
     <!-- Settings Window -->
     <div class="d-flex justify-space-between align-items-center">
-      <h1 class="text-center p-1">Al Quran</h1>
+      <h1 class="text-center">Al Quran</h1>
+      <button class="loadMore d-flex justify-space-between align-items-center pos-rel"><span>Load More..</span><span class="loadedTotal d-grid place-content-center">000</span></button>
+      <button class="bookmark"><img src="/img/bookmark.svg" alt="">
+        <div class="bookmarkWrapper">
+          <h2 class="text-left m-bottom-1 d-flex justify-space-between">Bookmark List:<span class="closeBtnForBookmark">&times;</span></h2>
+          <ul class="bookmarkList">
+            <li>
+               <!-- This is a demo structure
+              <div>
+                <bdi>صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ</bdi>
+                <div>7 : الفاتحة</div>
+                <div class="bookmarkTools d-flex">
+                  <img src="/img/edit.svg" alt=""><img src="/img/note.svg" alt=""><img src="/img/xMark.svg" alt="">
+                </div>
+                <textarea placeholder="Add Note here..."></textarea>
+              </div> 
+              -->
+            </li>
+          </ul>
+        </div>
+      </button>
       <button class="navBtn">
         <div class="navIcon"></div>
       </button>
@@ -90,9 +132,10 @@
           <div class="d-flex justify-content-center gap-100 align-items-center">
             <button type="submit">Save</button>
             <button type="reset">Clear</button>
-            <button class="clear">Reset App & Save</button>
+            <button class="reset">Reset App</button>
           </div>
           <p class="text-center m-top-3">Created with ♥️ by Md Alamin</p>
+          <p class="text-center d-flex justify-content-center align-items-center">Al Quran - App Version&nbsp;<span class="version"><span class="versionInfoBtn"></span>2.0</span>&nbsp;<span class="d-flex justify-content-en"><img class="w-20p d-inline-b" src="/img/github.svg" alt=""></span></p>
         </form>
       </div>
     </div>
@@ -103,19 +146,30 @@
         <option value="">BN</option>
         <option value="">EN</option>
       </select>
-      <button class="searchSubmit"><img src="/img/search.svg" alt="Search"/></button>
+      <button class="searchSubmit"><img src="/img/search.svg" alt="Search" /></button>
     </div>
-    <div class="quranResult m-top-1">
+    <div class="lastRead d-flex justify-space-between align-items-center">
+      <h5>Last Read:</h5>
+      <bdi></bdi>
+      <div class="d-flex gap-100">
+        <p> :</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="quranResult">
       <!-- Quran may appear here, inshaAllah -->
     </div>
     <div class="tools d-grid m-top-3">
       <div class="pos-rel icons d-flex justify-content-center gap-200 align-items-center">
         <span class="resultItemsCount fs-80 pos-ab top-0 left-0"></span>
-        <img src="/img/left.svg" alt="">
-        <img class="playPause" src="/img/playBtn.svg" alt="">
-        <img src="/img/right.svg" alt="">
+        <img data-tool="left" src="/img/left.svg" alt="">
+        <span class="currentChapter">Listen :&nbsp;<span></span></span>
+        <img data-tool="playPause" class="playPause" src="/img/playBtn.svg" alt="">
+        <img data-tool="right" src="/img/right.svg" alt="">
         <div class="autoScroll">
-          <img src="/img/scroll.svg" alt="">
+          <span data-speed="00" class="text-center minusAutoScroll pos-rel">-</span>
+          <img data-tool="scroll" src="/img/scroll.svg" alt="">
+          <span class="text-center plusAutoScroll">+</span>
         </div>
 
         <div class="afterSearchIcons pos-ab right-0" data-currentTarget>
@@ -126,6 +180,7 @@
 
     </div>
   </div>
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
