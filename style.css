@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: QuranicArabic;
-  src: url("/fonts/Al Qalam Quran Majeed Web Regular.ttf");
+  src: url("fonts/Al Qalam Quran Majeed Web Regular.ttf");
 }
 
 @font-face {
   font-family: jannatLT;
-  src: url("/fonts/JannaLTBold.ttf");
+  src: url("fonts/JannaLTBold.ttf");
 }
 
 @font-face {
   font-family: decoType;
-  src: url("/fonts/DecoType Naskh regular.ttf");
+  src: url("fonts/DecoType Naskh regular.ttf");
 }
 
 @font-face {
   font-family: Uthmanic;
-  src: url("/fonts/KFGQPC Uthmanic Script HAFS Regular.otf");
+  src: url("fonts/KFGQPC Uthmanic Script HAFS Regular.otf");
 }
 
 
@@ -74,9 +74,9 @@ button:hover {
 }
 
 input:focus {
-outline: 4px solid rgba(0, 0, 0, .15);
-background-color: rgba(255, 255, 255, .15);
-color: #fff;
+  outline: 3px solid rgba(255, 255, 255, .25) !important;
+  background-color: rgba(255, 255, 255, .05) !important;
+  color: #fff !important;
 }
 
 ul,
@@ -90,14 +90,31 @@ body {
   font-family: jannatLT, sans-serif;
 }
 
+/*
+
 :target {
   border: 1.5px solid rgba(0, 0, 0, .1) !important;
   background: rgba(0, 0, 0, .3) !important;
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, .2) inset !important;
 }
+*/
 
-.dummyChecker {
+hr {
+  appearance: none;
+  border: none;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, .3);
+}
+
+
+.dummy {
   outline: 1px solid red;
+}
+
+.dummy * {
+  border: 1px solid greenyellow;
 }
 
 .fs-50 {
@@ -132,6 +149,10 @@ body {
   margin: 0 auto 0 0;
 }
 
+.m-left-10 {
+  margin-left: 10px;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -152,12 +173,20 @@ body {
   width: 10%;
 }
 
+.w-20p {
+  width: 20px;
+}
+
 .pos-rel {
   position: relative;
 }
 
 .pos-ab {
   position: absolute;
+}
+
+.pointer-none {
+  pointer-events: none
 }
 
 .left-0 {
@@ -176,8 +205,17 @@ body {
   bottom: 0;
 }
 
+.d-inline-b {
+  display: inline-block !important;
+}
+
+
 .d-flex {
   display: flex !important;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .d-grid {
@@ -188,8 +226,20 @@ body {
   justify-content: center;
 }
 
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
 .align-items-center {
   align-items: center;
+}
+
+.aligh-items-end {
+  align-items: end;
 }
 
 .align-self-end {
@@ -252,12 +302,25 @@ body {
   margin-top: 20px;
 }
 
+.m-bottom-1 {
+  margin-bottom: 10px;
+}
+
+
 .text-center {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .clr-text-red {
   color: red;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .outline {
@@ -273,6 +336,27 @@ body {
   margin: 0 auto;
   padding-top: 0 !important;
 }
+
+.loadMore {
+  color: #fff;
+  font-size: .8rem;
+  width: 115px;
+  padding: 3px 5px;
+  background: rgba(0, 0, 0, .1);
+  outline: 3px solid rgba(255, 255, 255, .2);
+}
+
+.loadedTotal {
+  font-size: .65rem;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-right-color: rgba(255, 255, 255, .7);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 
 .initialLoadingOverlay {
   backdrop-filter: blur(15px);
@@ -361,7 +445,7 @@ body {
   animation: loader 1.5s linear 1.2s;
 }
 
-.initialLoadingOverlay .loadingInfo >*:last-child {
+.initialLoadingOverlay .loadingInfo>*:last-child {
   opacity: 0;
   transform: translateY(-10px);
   animation: loader 1.5s linear 1.5s;
@@ -371,8 +455,11 @@ body {
   0% {
     opacity: 1;
   }
-  
-  70% {opacity: 1}
+
+  70% {
+    opacity: 1
+  }
+
   100% {
     transform: translateY(-50px);
     opacity: 0;
@@ -402,7 +489,7 @@ body {
 }
 
 .container .window {
-  transform: translateX(200%);
+  transform: translateX(150%);
   position: fixed;
   inset: 0;
   backdrop-filter: blur(15px);
@@ -452,7 +539,7 @@ body {
 }
 
 .container .window form[name="settingForm"] input {
-  outline: 1px solid deepskyblue;
+  outline: 1px solid rgba(255, 255, 255, .1);
   background: rgba(0, 0, 0, .1);
   padding: 3px !important;
 }
@@ -583,9 +670,209 @@ body {
   margin: 0 auto;
 }
 
+/* Floatint Window */
+.floatingWindow {
+  transition: all 200ms;
+  z-index: 1000;
+  background: url("/img/goto.svg") no-repeat rgba(0, 0, 0, .1);
+  backdrop-filter: blur(20px);
+  background-size: 80%;
+  background-position: center;
+  outline: 2px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  top: 20%;
+  padding: 5px;
+}
+
+.floatingWindow * {
+  display: none;
+}
+
+.floatingWindow.active {
+  border-radius: 3px;
+  width: 120px;
+  height: 120px;
+  background: transparent;
+}
+
+.floatingWindow>div>select,
+.floatingWindow>div>input {
+  width: 110px !important;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, .1);
+  width: max-content;
+  color: #fff;
+  text-align: center;
+  padding: 1px;
+  outline: 1px solid rgba(255, 255, 255, .05);
+}
+
+.floatingWindow>div>div>* {
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .35);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.translateBNENSeparate,
+.archiveThisAyah {
+  width: 190px;
+  left: 50%;
+  top: 48%;
+  background: transparent;
+  transform: translate(-50%, -48%);
+  position: absolute;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .35);
+  z-index: -10;
+  border-radius: 5px;
+  transition: all 300ms;
+  opacity: .5;
+}
+
+.translateBNENSeparate * {
+  padding: 2px 10px;
+  background: rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  font-weight: 800;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .45) inset;
+}
+
+.translateBNENSeparate *:hover {
+  transform: scale(.98);
+  background: rgba(0, 0, 0, .2);
+}
+
+.archiveThisAyah {
+  width: 180px;
+  top: 18% !important;
+  opacity: .9;
+}
+
+.archiveThisAyah div img {
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, .3);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+/* Bookmark */
+
+.bookmark {
+  background: rgba(0, 0, 0, .1);
+}
+
+.bookmark>img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: 2px solid rgba(255, 255, 255, .2);
+}
+
+.bookmark .bookmarkWrapper {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  inset: 0;
+  z-index: 100;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.bookmarkWrapper .bookmarkList {
+  counter-reset: count;
+}
+
+
+.bookmarkWrapper .bookmarkList li::before {
+  counter-increment: count;
+  content: counter(count);
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .2);
+  border: 1px solid rgba(0, 0, 0, .05);
+  outline: 2px solid rgba(255, 255, 255, .35);
+  color: #fff;
+  display: grid;
+  place-content: center;
+  align-self: start;
+  margin-top: 10px;
+}
+
+
+
+.bookmarkWrapper .bookmarkList>li {
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, .2);
+  text-align: left;
+  padding: 5px 10px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+
+
+.bookmarkWrapper .bookmarkList li img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 4.5px;
+  border-radius: 1px;
+  outline: 2px solid rgba(255, 255, 255, .2);
+}
+
+
+
+.bookmarkWrapper .bookmarkList li div>bdi {
+  display: block;
+  width: 30ch !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bookmarkWrapper .bookmarkList li div>bdi+div {
+  font-size: .8rem;
+  color: rgba(255, 255, 255, .7)
+}
+
+.bookmarkWrapper .bookmarkList li div>textarea {
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.2)1%, rgba(255, 255, 255, 0.1)70%, rgba(255, 255, 255, 0.2)1%);
+  color: #fff;
+  font-size: .85rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  outline: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 1px;
+  width: 100%;
+  resize: none;
+}
+
+.bookmarkWrapper .bookmarkList textarea {
+  padding: 0 5px;
+}
+
+.bookmarkWrapper .bookmarkList .bookmarkTools {
+  justify-self: end;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+
+
 .quranResult {
   position: relative;
-  max-height: 416px;
+  max-height: 445px;
   overflow-y: scroll;
   background: rgba(255, 255, 255, .1);
   text-align: center;
@@ -599,7 +886,7 @@ body {
 .loading {
   position: absolute;
   width: 100%;
-  height: 416px;
+  height: 445px;
   background: rgba(0, 0, 0, .45);
   backdrop-filter: blur(15px);
   place-items: center;
@@ -615,7 +902,6 @@ body {
   border: 10px solid deepskyblue;
   border-left: 10px solid transparent;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -645,19 +931,45 @@ body {
   box-shadow: 0 1px 3px 0 rgba(255, 255, 255, .35);
   padding: 8px;
   transition: all .3s;
+  position: relative;
 }
 
 .ayah .audioBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/img/playBtn.svg");
+  background-image: url("img/playBtn.svg");
   background-repeat: no-repeat;
   position: absolute;
-  right: 6px;
+  right: 1px;
+  bottom: 10px;
   transform: translateY(50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Ayah Count */
+
+.verses div {
+  counter-reset: count;
+}
+
+.verses div .ayah::after {
+  content: counter(count);
+  counter-increment: count;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  font-size: 1.05rem;
+  font-weight: 600;
   width: 25px;
-  height: 25px;
+  height: 20px;
+  background: rgba(0, 0, 0, .1);
+  border-radius: 3px;
+  display: grid;
+  place-content: center;
+  outline: 2px solid rgba(255, 255, 255, .1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3)
 }
 
 
@@ -681,6 +993,61 @@ body {
   font-size: .6rem;
 }
 
+/* Reload Previous Ayah */
+.reloadPreviousAyahBtn {
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  display: grid;
+  place-content: center;
+  width: 25px;
+  height: 25px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .09);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1)
+}
+
+.toLoadWholeQuran {
+  display: none;
+  position: absolute;
+  width: max-content;
+  bottom: -80%;
+  transition: all 400ms;
+  background: #fff;
+  border-radius: 3px;
+  padding: 3px 5px;
+  outline: 3px solid rgba(0, 0, 0, .15);
+  z-index: 100;
+}
+
+.toLoadWholeQuran.visible {
+  display: block;
+}
+
+.globalNotice {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 3px;
+  font-size: .7rem;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 10;
+  animation: slideInOut 1s linear;
+}
+
+
+@keyframes slideInOut {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* tools */
 
@@ -696,16 +1063,225 @@ body {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
 }
 
+.currentChapter {
+  position: absolute;
+  top: -20px;
+  height: 20px !important;
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, .5);
+}
+
+.currentChapter>span {
+  display: inline-block;
+  border-radius: 3px;
+  font-size: .7rem;
+  padding: 0;
+}
+
 
 /* Read-Only Auto Scroll */
 
 .autoScroll {
   position: absolute;
   transform: translateX(100px);
+  display: grid;
 }
+
+.autoScroll .text-center {
+  display: grid;
+  display: none;
+  place-content: center;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-left: 5px;
+  margin-block: 1px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+}
+
+.minusAutoScroll::before {
+  content: attr(data-speed);
+  position: absolute;
+  font-size: .5rem;
+  bottom: -100%;
+  color: rgba(0, 0, 0, .7);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.minusAutoScroll.deepskyblue::before {
+  color: deepskyblue;
+}
+
+.minusAutoScroll.black::before {
+  color: #000;
+}
+
+.minusAutoScroll.deepBlue::before {
+  color: #1f62ff;
+}
+
+.minusAutoScroll.green::before {
+  color: #00a120;
+}
+
+.minusAutoScroll.yellow::before {
+  color: #baba00;
+}
+
+.minusAutoScroll.pink::before {
+  color: #b200d1;
+}
+
+
+.version {
+  background: rgba(255, 255, 255, .08);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.versionInfoBtn {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('/img/info.svg') no-repeat;
+  object-fit: contain;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  outline: 3px solid rgba(255, 255, 255, .2);
+}
+
+.versionDetails {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  max-height: 550px;
+  background: rgba(255, 255, 255, .9);
+  color: #5A5656;
+  text-align: left;
+  overflow: scroll;
+  padding: 10px 0;
+  outline: 3px solid rgba(255, 255, 255, .3);
+}
+
+.versionDetails h3 {
+  color: #2D2B2B;
+  padding: 0 10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .2)
+}
+
+.versionDetails h3:not(:first-child) {
+  margin-top: 10px;
+}
+
+.versionDetails ul li {
+  padding: 0 10px;
+}
+
+.versionDetails ul li {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.versionDetailsCloseBtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Last Read */
+
+.lastRead {
+  background: rgba(255, 255, 255, .2);
+  box-shadow: 0 1px 5px 0 rgba(255, 255, 255, .5);
+  font-size: .8rem;
+  margin-block: 5px;
+  display: grid;
+}
+
+.lastRead>*:not(:last-child) {
+  padding-inline: 5px;
+}
+
+.lastRead h5 {
+  text-align: center;
+  box-shadow: 2px 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.lastRead div {
+  padding-left: 5px;
+  box-shadow: -2px 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.lastRead h5+bdi {
+  white-space: nowrap;
+  width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+
+.lastRead .lastReadCloseBtn {
+  background: rgba(0, 0, 0, .15);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .15);
+  padding-inline: 5px;
+}
+
+
+/* Check on removing bookmark items */
+.checkingEl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(20px) !important;
+  font-size: .7rem;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .3);
+  animation: popIn .1s linear;
+}
+
+.checkingEl h3 {
+  padding: 0 3px;
+}
+
+.checkingEl div {
+  background: rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .2);
+}
+
+@keyframes popIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 @media (min-width: 500px) {
   .quranResult {
     max-height: 75vh;
   }
+
 }
