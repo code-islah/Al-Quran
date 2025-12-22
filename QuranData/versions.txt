@@ -1,0 +1,46 @@
+<div class="versionDetails">
+  <span onclick="closeVersionWrapper(this)" class="versionDetailsCloseBtn">&times;</span>
+  <h3>Version: 2.0</h3>
+  <ul>
+    <li>◉ Floating Widget Updated :
+      <ul>
+        <li>&nbsp;&nbsp;◎ Copy selected Ayah</li>
+        <li>&nbsp;&nbsp;◎ Add to bookmark</li>
+      </ul>
+    </li>
+    <li>◉ Bookmark section added</li>
+    <li>
+      <ul>
+        <li>&nbsp;&nbsp;◎ Nagivation, update/edit, delete buttons added</li>
+      </ul>
+    </li>
+    <h3>Version: 1.5</h3>
+    <ul>
+      <li>◉ Listen to any single ayah by one tap</li>
+      <li>◉ Listen to the whole Quran</li>
+      <li>◉ Increase/decrease the scrolling speed</li>
+      <li>◉ Load Portion or whole at once</li>
+      <li>◉ Translate single ayah into English/Bangla</li>
+      <li>◉ Reverse Button on single translation</li>
+      <li>◉ Floating draggable Widget to navigate to any chapter</li>
+      <li>◉ Easy Translation with floating button</li>
+    </ul>
+
+    <h3>Version: 1.0</h3>
+    <ul>
+      <li>◉ Text-Only view</li>
+      <li>◉ Search and navigate between each results</li>
+      <li>◉ Setting Section added :
+        <ul class="m-left-10">
+          <li>&nbsp;&nbsp;◎ Font Family</li>
+          <li>&nbsp;&nbsp;◎ Font Size</li>
+          <li>&nbsp;&nbsp;◎ Background Color</li>
+        </ul>
+      </li>
+      <li>◉ Separate Bangla Version</li>
+      <li>◉ Separate English Version</li>
+      <li>◉ Auto Scroll</li>
+      <li>◉ Jump to Next Chapter</li>
+      <li>◉ Back to Previous Chapter</li>
+    </ul>
+    <div>
