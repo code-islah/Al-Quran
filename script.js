@@ -178,32 +178,87 @@ nav.addEventListener(
 );
 
 // Floating Window Handling
+// const floatingWindow = document.querySelector(".floatingWindow");
+// const translateBNENSeparate = document.querySelector(".translateBNENSeparate");
+// floatingWindow.addEventListener("touchmove", (e) => {
+//   let targetElem = e.touches[0].target;
+//   let leftValue = e.touches[0].clientX;
+//   let topValue = e.touches[0].clientY;
+//   targetElem.style.outlineWidth = "3px";
+//   targetElem.style.background = "rgba(255,255,255,0.7)";
+//   targetElem.style.transform = "scale(.5)";
+//   targetElem.style.left = leftValue + "px";
+//   targetElem.style.top = topValue + "px";
+
+//   localStorage.setItem(
+//     "lastPositionOfFloatingWindow",
+//     leftValue + " + " + topValue,
+//   );
+//   saveToLocal();
+// });
+
+// floatingWindow.addEventListener("touchend", (e) => {
+//   detectAyahToTranslate();
+//   let targetElem = e.changedTouches[0].target;
+//   targetElem.style.outlineWidth = "2px";
+//   targetElem.style.background = "";
+//   targetElem.style.transform = "scale(1)";
+// });
+
+
+
 const floatingWindow = document.querySelector(".floatingWindow");
-const translateBNENSeparate = document.querySelector(".translateBNENSeparate");
-floatingWindow.addEventListener("touchmove", (e) => {
-  let targetElem = e.touches[0].target;
-  let leftValue = e.touches[0].clientX;
-  let topValue = e.touches[0].clientY;
-  targetElem.style.outlineWidth = "3px";
-  targetElem.style.background = "rgba(255,255,255,0.7)";
-  targetElem.style.transform = "scale(.5)";
-  targetElem.style.left = leftValue + "px";
-  targetElem.style.top = topValue + "px";
+
+let offsetX = 0;
+let offsetY = 0;
+let isDragging = false;
+
+floatingWindow.addEventListener("pointerdown", (e) => {
+  isDragging = true;
+
+  const rect = floatingWindow.getBoundingClientRect();
+  offsetX = e.clientX - rect.left;
+  offsetY = e.clientY - rect.top;
+
+  floatingWindow.setPointerCapture(e.pointerId);
+
+  floatingWindow.style.outlineWidth = "3px";
+  floatingWindow.style.background = "rgba(255,255,255,0.7)";
+  floatingWindow.style.transform = "scale(.9)";
+});
+
+floatingWindow.addEventListener("pointermove", (e) => {
+  if (!isDragging) return;
+
+  const leftValue = e.clientX - offsetX;
+  const topValue = e.clientY - offsetY;
+
+  floatingWindow.style.position = "fixed";
+  floatingWindow.style.left = leftValue + "px";
+  floatingWindow.style.top = topValue + "px";
 
   localStorage.setItem(
     "lastPositionOfFloatingWindow",
-    leftValue + " + " + topValue,
+    `${leftValue},${topValue}`
   );
-  saveToLocal();
 });
 
-floatingWindow.addEventListener("touchend", (e) => {
+floatingWindow.addEventListener("pointerup", (e) => {
+  isDragging = false;
+
+  floatingWindow.releasePointerCapture(e.pointerId);
+
   detectAyahToTranslate();
-  let targetElem = e.changedTouches[0].target;
-  targetElem.style.outlineWidth = "2px";
-  targetElem.style.background = "";
-  targetElem.style.transform = "scale(1)";
+
+  floatingWindow.style.outlineWidth = "2px";
+  floatingWindow.style.background = "";
+  floatingWindow.style.transform = "scale(1)";
 });
+
+
+
+
+////
 
 function floatingWindowOnActive() {
   const verseInfo = document.querySelectorAll(".verseInfo");

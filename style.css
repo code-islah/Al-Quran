@@ -1291,3 +1291,7 @@ hr {
     max-height: 75vh;
   }
 }
+
+.floatingWindow {
+  touch-action: none;
+}
