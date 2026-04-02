@@ -20,7 +20,6 @@
   src: url("fonts/KFGQPC Uthmanic Script HAFS Regular.otf");
 }
 
-
 *,
 *::before,
 *::after {
@@ -70,12 +69,12 @@ option {
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, .2) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 input:focus {
-  outline: 3px solid rgba(255, 255, 255, .25) !important;
-  background-color: rgba(255, 255, 255, .05) !important;
+  outline: 3px solid rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
   color: #fff !important;
 }
 
@@ -86,7 +85,7 @@ li {
 
 body {
   background: deepskyblue;
-  font: 400 .9rem/1.5;
+  font: 400 0.9rem/1.5;
   font-family: jannatLT, sans-serif;
 }
 
@@ -105,9 +104,8 @@ hr {
 }
 
 ::placeholder {
-  color: rgba(0, 0, 0, .3);
+  color: rgba(0, 0, 0, 0.3);
 }
-
 
 .dummy {
   outline: 1px solid red;
@@ -118,11 +116,11 @@ hr {
 }
 
 .fs-50 {
-  font-size: .5rem
+  font-size: 0.5rem;
 }
 
 .fs-80 {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .fs-100 {
@@ -186,7 +184,7 @@ hr {
 }
 
 .pointer-none {
-  pointer-events: none
+  pointer-events: none;
 }
 
 .left-0 {
@@ -208,7 +206,6 @@ hr {
 .d-inline-b {
   display: inline-block !important;
 }
-
 
 .d-flex {
   display: flex !important;
@@ -243,11 +240,11 @@ hr {
 }
 
 .align-self-end {
-  align-self: end
+  align-self: end;
 }
 
 .justify-self-end {
-  justify-self: end
+  justify-self: end;
 }
 
 .justify-space-between {
@@ -263,15 +260,15 @@ hr {
 }
 
 .gap-100 {
-  gap: 10px
+  gap: 10px;
 }
 
 .gap-200 {
-  gap: 15px
+  gap: 15px;
 }
 
 .gap-300 {
-  gap: 20px
+  gap: 20px;
 }
 
 .p-1 {
@@ -306,7 +303,6 @@ hr {
   margin-bottom: 10px;
 }
 
-
 .text-center {
   text-align: center;
 }
@@ -324,7 +320,7 @@ hr {
 }
 
 .outline {
-  outline: 3px solid rgba(0, 0, 0, .1);
+  outline: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -339,24 +335,23 @@ hr {
 
 .loadMore {
   color: #fff;
-  font-size: .8rem;
+  font-size: 0.8rem;
   width: 115px;
   padding: 3px 5px;
-  background: rgba(0, 0, 0, .1);
-  outline: 3px solid rgba(255, 255, 255, .2);
+  background: rgba(0, 0, 0, 0.1);
+  outline: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .loadedTotal {
-  font-size: .65rem;
+  font-size: 0.65rem;
   width: 25px;
   height: 25px;
   padding: 2px;
-  border: 2px solid rgba(255, 255, 255, .2);
-  border-right-color: rgba(255, 255, 255, .7);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   pointer-events: none;
 }
-
 
 .initialLoadingOverlay {
   backdrop-filter: blur(15px);
@@ -370,25 +365,26 @@ hr {
 }
 
 .initialLoadingOverlay::before {
-  content: '';
-  background: url("/img/Quran.svg") no-repeat center;
+  content: "";
+  background: url("./img/Quran.svg") no-repeat center;
   background-size: 250px;
-  opacity: .05;
+  opacity: 0.05;
   position: absolute;
   inset: 0;
 }
 
-
-.initialLoadingOverlay>h1 {
+.initialLoadingOverlay > h1 {
   align-self: end;
   font-size: 2rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 255, 255, .7);
+  text-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    0 0 5px rgba(255, 255, 255, 0.7);
 }
 
-.initialLoadingOverlay>div {
+.initialLoadingOverlay > div {
   display: grid;
   gap: 15px;
-  padding-bottom: .2rem;
+  padding-bottom: 0.2rem;
   align-self: end;
 }
 
@@ -398,30 +394,50 @@ hr {
   border-radius: 5px;
   margin: 0 auto;
   height: 10px;
-  outline: 3px solid rgba(255, 255, 255, .4);
-  background: rgba(255, 255, 255, .2);
+  outline: 3px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   animation: loadedToOpen 1.5s linear forwards;
 }
 
 @keyframes loadedToOpen {
   0% {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.3) 5%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(255, 255, 255, 0.3) 5%
+    );
   }
 
   25% {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 25%, rgba(255, 255, 255, 0.3) 5%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 25%,
+      rgba(255, 255, 255, 0.3) 5%
+    );
   }
 
   50% {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 50%, rgba(255, 255, 255, 0.3) 5%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(255, 255, 255, 0.3) 5%
+    );
   }
 
   75% {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 75%, rgba(255, 255, 255, 0.3) 5%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 75%,
+      rgba(255, 255, 255, 0.3) 5%
+    );
   }
 
   100% {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 100%, rgba(255, 255, 255, 0.3) 5%);
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 100%,
+      rgba(255, 255, 255, 0.3) 5%
+    );
   }
 }
 
@@ -430,22 +446,22 @@ hr {
   position: absolute;
   bottom: 100px;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   gap: 2px;
 }
 
-.initialLoadingOverlay .loadingInfo>*:first-child {
+.initialLoadingOverlay .loadingInfo > *:first-child {
   opacity: 0;
   animation: loader 1.5s linear;
 }
 
-.initialLoadingOverlay .loadingInfo>*:nth-child(2) {
+.initialLoadingOverlay .loadingInfo > *:nth-child(2) {
   opacity: 0;
   transform: translateY(-30px);
   animation: loader 1.5s linear 1.2s;
 }
 
-.initialLoadingOverlay .loadingInfo>*:last-child {
+.initialLoadingOverlay .loadingInfo > *:last-child {
   opacity: 0;
   transform: translateY(-10px);
   animation: loader 1.5s linear 1.5s;
@@ -457,7 +473,7 @@ hr {
   }
 
   70% {
-    opacity: 1
+    opacity: 1;
   }
 
   100% {
@@ -469,10 +485,10 @@ hr {
 .container .navBtn {
   width: 25px;
   height: 25px;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.2);
   position: relative;
   border-radius: 1px;
-  outline: 5px solid rgba(255, 255, 255, .2);
+  outline: 5px solid rgba(255, 255, 255, 0.2);
 }
 
 .container .navBtn .navIcon,
@@ -489,23 +505,22 @@ hr {
 }
 
 .container .window {
-  transform: translateX(150%);
+  transform: translateX(9999px);
   position: fixed;
   inset: 0;
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.05);
   padding: 10px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   max-width: 640px;
   margin: 0 auto;
-  z-index: 1000 !important
+  z-index: 1000 !important;
 }
 
 .container .window form[name="settingForm"] select {
   appearance: none;
   padding: 5px;
 }
-
 
 .container .window form[name="settingForm"] div {
   display: grid;
@@ -514,7 +529,7 @@ hr {
 }
 
 .container .window form[name="settingForm"] .closer {
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.2);
   width: 35px;
   height: 35px;
   text-align: center;
@@ -534,13 +549,15 @@ hr {
 .container .window form[name="settingForm"] button {
   padding: 5px 10px;
   background: transparent;
-  box-shadow: -2px -2px 5px 0 rgba(255, 255, 255, .3), 2px 2px 5px 0 rgba(0, 0, 0, .2);
+  box-shadow:
+    -2px -2px 5px 0 rgba(255, 255, 255, 0.3),
+    2px 2px 5px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
 }
 
 .container .window form[name="settingForm"] input {
-  outline: 1px solid rgba(255, 255, 255, .1);
-  background: rgba(0, 0, 0, .1);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   padding: 3px !important;
 }
 
@@ -553,55 +570,60 @@ hr {
   border-radius: 5px;
   width: 85px;
   background: hotpink;
-  outline: 5px solid rgba(255, 255, 255, .3);
-  box-shadow: -3px -3px 5px 0 rgba(255, 255, 255, .3) inset, 3px 3px 5px 0 rgba(255, 255, 255, .3) inset;
+  outline: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    -3px -3px 5px 0 rgba(255, 255, 255, 0.3) inset,
+    3px 3px 5px 0 rgba(255, 255, 255, 0.3) inset;
 }
 
 /* Theme Templates */
 .themeTemplates {
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   padding: 5px;
   width: 200px;
   height: 100px;
   position: absolute;
   right: 10px;
-  outline: 5px solid rgba(255, 255, 255, .3);
-  box-shadow: -3px -3px 5px 0 rgba(255, 255, 255, .3) inset, 3px 3px 5px 0 rgba(255, 255, 255, .3) inset, 0 0 5px 5px rgba(255, 255, 255, .2);
+  outline: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    -3px -3px 5px 0 rgba(255, 255, 255, 0.3) inset,
+    3px 3px 5px 0 rgba(255, 255, 255, 0.3) inset,
+    0 0 5px 5px rgba(255, 255, 255, 0.2);
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.themeTemplates>* {
+.themeTemplates > * {
   border-radius: 5px;
   display: block;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .2);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.2);
 }
 
-.themeTemplates>*:first-child {
+.themeTemplates > *:first-child {
   background: deepskyblue;
 }
 
-.themeTemplates>*:nth-child(2) {
+.themeTemplates > *:nth-child(2) {
   background: #000;
 }
 
-.themeTemplates>*:nth-child(3) {
+.themeTemplates > *:nth-child(3) {
   background: #1f62ff;
 }
 
-.themeTemplates>*:nth-child(4) {
+.themeTemplates > *:nth-child(4) {
   background: #00a120;
 }
 
-.themeTemplates>*:nth-child(5) {
+.themeTemplates > *:nth-child(5) {
   background: #baba00;
 }
 
-.themeTemplates>*:last-child {
+.themeTemplates > *:last-child {
   background: #b200d1;
 }
 
@@ -610,12 +632,11 @@ hr {
   content: "";
   transform: translateY(10px);
   width: 100%;
-
 }
 
 .container .navBtn .navIcon::after {
   content: "";
-  transform: translateY(20px)
+  transform: translateY(20px);
 }
 
 .ayahSearchSection {
@@ -624,43 +645,42 @@ hr {
   border-radius: 5px;
 }
 
-
-.ayahSearchSection>* {
+.ayahSearchSection > * {
   padding: 8px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, .2);
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.ayahSearchSection>*:first-child {
+.ayahSearchSection > *:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.ayahSearchSection>*:nth-child(2) {
+.ayahSearchSection > *:nth-child(2) {
   border-radius: 0;
   appearance: none;
   text-align: center;
-  background: rgba(0, 0, 0, .05);
+  background: rgba(0, 0, 0, 0.05);
   color: #fff;
 }
 
-.ayahSearchSection>*:last-child::before {
-  content: '';
+.ayahSearchSection > *:last-child::before {
+  content: "";
   position: absolute;
   left: -50%;
   transform: translateX(-25%);
   top: 0;
   border-width: 5px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, .3) transparent transparent transparent;
+  border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent;
 }
 
-.ayahSearchSection>*:last-child {
+.ayahSearchSection > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   text-align: center;
-  background: rgba(0, 0, 0, .05);
+  background: rgba(0, 0, 0, 0.05);
   color: #fff;
   position: relative;
 }
@@ -674,11 +694,11 @@ hr {
 .floatingWindow {
   transition: all 200ms;
   z-index: 1000;
-  background: url("/img/goto.svg") no-repeat rgba(0, 0, 0, .1);
+  background: url("./img/goto.svg") no-repeat rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   background-size: 80%;
   background-position: center;
-  outline: 2px solid rgba(255, 255, 255, .3);
+  outline: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   position: absolute;
   width: 30px;
@@ -699,25 +719,24 @@ hr {
   background: transparent;
 }
 
-.floatingWindow>div>select,
-.floatingWindow>div>input {
+.floatingWindow > div > select,
+.floatingWindow > div > input {
   width: 110px !important;
   margin: 0 auto;
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
   width: max-content;
   color: #fff;
   text-align: center;
   padding: 1px;
-  outline: 1px solid rgba(255, 255, 255, .05);
+  outline: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.floatingWindow>div>div>* {
-  border: 2px solid rgba(255, 255, 255, .2);
-  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .35);
+.floatingWindow > div > div > * {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.35);
   background-clip: text;
   color: transparent;
 }
-
 
 .translateBNENSeparate,
 .archiveThisAyah {
@@ -727,36 +746,36 @@ hr {
   background: transparent;
   transform: translate(-50%, -48%);
   position: absolute;
-  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .35);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.35);
   z-index: -10;
   border-radius: 5px;
   transition: all 300ms;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .translateBNENSeparate * {
   padding: 2px 10px;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   font-weight: 800;
-  box-shadow: 0 0 5px 0 rgba(255, 255, 255, .45) inset;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.45) inset;
 }
 
 .translateBNENSeparate *:hover {
-  transform: scale(.98);
-  background: rgba(0, 0, 0, .2);
+  transform: scale(0.98);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .archiveThisAyah {
   width: 180px;
   top: 18% !important;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .archiveThisAyah div img {
   width: 28px;
   height: 28px;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
   padding: 2px;
   border-radius: 3px;
 }
@@ -764,21 +783,21 @@ hr {
 /* Bookmark */
 
 .bookmark {
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.bookmark>img {
+.bookmark > img {
   width: 30px;
   height: 30px;
   padding: 5px;
   border-radius: 5px;
-  outline: 2px solid rgba(255, 255, 255, .2);
+  outline: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .bookmark .bookmarkWrapper {
   display: none;
   position: absolute;
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   color: #fff;
   inset: 0;
@@ -791,16 +810,15 @@ hr {
   counter-reset: count;
 }
 
-
 .bookmarkWrapper .bookmarkList li::before {
   counter-increment: count;
   content: counter(count);
   width: 25px;
   height: 25px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, .2);
-  border: 1px solid rgba(0, 0, 0, .05);
-  outline: 2px solid rgba(255, 255, 255, .35);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  outline: 2px solid rgba(255, 255, 255, 0.35);
   color: #fff;
   display: grid;
   place-content: center;
@@ -808,20 +826,16 @@ hr {
   margin-top: 10px;
 }
 
-
-
-.bookmarkWrapper .bookmarkList>li {
-  background: rgba(255, 255, 255, .1);
-  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, .2);
+.bookmarkWrapper .bookmarkList > li {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.2);
   text-align: left;
   padding: 5px 10px;
   margin-bottom: 1px;
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
 }
-
-
 
 .bookmarkWrapper .bookmarkList li img {
   display: inline-block;
@@ -829,12 +843,10 @@ hr {
   height: 25px;
   padding: 4.5px;
   border-radius: 1px;
-  outline: 2px solid rgba(255, 255, 255, .2);
+  outline: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-
-
-.bookmarkWrapper .bookmarkList li div>bdi {
+.bookmarkWrapper .bookmarkList li div > bdi {
   display: block;
   width: 30ch !important;
   white-space: nowrap;
@@ -842,17 +854,22 @@ hr {
   overflow: hidden;
 }
 
-.bookmarkWrapper .bookmarkList li div>bdi+div {
-  font-size: .8rem;
-  color: rgba(255, 255, 255, .7)
+.bookmarkWrapper .bookmarkList li div > bdi + div {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.bookmarkWrapper .bookmarkList li div>textarea {
-  background: linear-gradient(rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.2)1%, rgba(255, 255, 255, 0.1)70%, rgba(255, 255, 255, 0.2)1%);
+.bookmarkWrapper .bookmarkList li div > textarea {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.1) 35%,
+    rgba(255, 255, 255, 0.2) 1%,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0.2) 1%
+  );
   color: #fff;
-  font-size: .85rem;
-  border: 1px solid rgba(0, 0, 0, .1);
-  outline: 3px solid rgba(255, 255, 255, .3);
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 1px;
   width: 100%;
   resize: none;
@@ -868,26 +885,23 @@ hr {
   margin-bottom: 4px;
 }
 
-
-
 .quranResult {
   position: relative;
   max-height: 445px;
   overflow-y: scroll;
-  background: rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, 0.1);
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
   font-size: 1.41rem;
   font-family: Uthmanic;
 }
-
 
 .loading {
   position: absolute;
   width: 100%;
   height: 445px;
-  background: rgba(0, 0, 0, .45);
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(15px);
   place-items: center;
   z-index: 1000;
@@ -906,12 +920,12 @@ hr {
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 
 .quranResult .verseInfo {
-  background: rgba(0, 0, 0, .25);
+  background: rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
   backdrop-filter: blur(15px);
@@ -919,18 +933,18 @@ hr {
   z-index: 1;
 }
 
-.quranResult .verseInfo>li {
-  font-size: .8rem;
+.quranResult .verseInfo > li {
+  font-size: 0.8rem;
   text-align: center;
   padding: 5px;
-  box-shadow: 1px 0 5px 0 rgba(0, 0, 0, .1);
+  box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .quranResult .ayah {
-  background: rgba(0, 0, 0, .1);
-  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, .35);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.35);
   padding: 8px;
-  transition: all .3s;
+  transition: all 0.3s;
   position: relative;
 }
 
@@ -964,22 +978,21 @@ hr {
   font-weight: 600;
   width: 25px;
   height: 20px;
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   display: grid;
   place-content: center;
-  outline: 2px solid rgba(255, 255, 255, .1);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .3)
+  outline: 2px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
-
 
 .afterSearchIcons {
   visibility: hidden;
   display: grid;
-  outline: 3px solid rgba(255, 255, 255, .2);
+  outline: 3px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 5px 2px rgba(255, 255, 255, .2) inset;
-  place-items: center
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2) inset;
+  place-items: center;
 }
 
 .afterSearchIcons img {
@@ -990,7 +1003,7 @@ hr {
 .afterSearchIcons::after {
   content: attr(data-currentTarget);
   position: absolute;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 /* Reload Previous Ayah */
@@ -1005,8 +1018,8 @@ hr {
   font-size: 1.3rem;
   font-weight: 900;
   border-radius: 2px;
-  background: rgba(255, 255, 255, .09);
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1)
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .toLoadWholeQuran {
@@ -1018,7 +1031,7 @@ hr {
   background: #fff;
   border-radius: 3px;
   padding: 3px 5px;
-  outline: 3px solid rgba(0, 0, 0, .15);
+  outline: 3px solid rgba(0, 0, 0, 0.15);
   z-index: 100;
 }
 
@@ -1031,13 +1044,12 @@ hr {
   top: 5px;
   right: 5px;
   padding: 5px 3px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   background: #fff;
   border-radius: 5px;
   z-index: 10;
   animation: slideInOut 1s linear;
 }
-
 
 @keyframes slideInOut {
   0% {
@@ -1059,28 +1071,27 @@ hr {
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  outline: 5px solid rgba(255, 255, 255, .3);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+  outline: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .currentChapter {
   position: absolute;
   top: -20px;
   height: 20px !important;
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, .5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.currentChapter>span {
+.currentChapter > span {
   display: inline-block;
   border-radius: 3px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   padding: 0;
 }
-
 
 /* Read-Only Auto Scroll */
 
@@ -1100,16 +1111,16 @@ hr {
   margin-left: 5px;
   margin-block: 1px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, .1);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .minusAutoScroll::before {
   content: attr(data-speed);
   position: absolute;
-  font-size: .5rem;
+  font-size: 0.5rem;
   bottom: -100%;
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, 0.7);
   width: 20px;
   height: 20px;
   pointer-events: none;
@@ -1139,9 +1150,8 @@ hr {
   color: #b200d1;
 }
 
-
 .version {
-  background: rgba(255, 255, 255, .08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -1154,13 +1164,13 @@ hr {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: url('/img/info.svg') no-repeat;
+  background: url("./img/info.svg") no-repeat;
   object-fit: contain;
   display: block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  outline: 3px solid rgba(255, 255, 255, .2);
+  outline: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .versionDetails {
@@ -1171,18 +1181,18 @@ hr {
   transform: translate(-50%, -50%);
   width: 340px;
   max-height: 550px;
-  background: rgba(255, 255, 255, .9);
-  color: #5A5656;
+  background: rgba(255, 255, 255, 0.9);
+  color: #5a5656;
   text-align: left;
   overflow: scroll;
   padding: 10px 0;
-  outline: 3px solid rgba(255, 255, 255, .3);
+  outline: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .versionDetails h3 {
-  color: #2D2B2B;
+  color: #2d2b2b;
   padding: 0 10px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, .2)
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .versionDetails h3:not(:first-child) {
@@ -1194,7 +1204,7 @@ hr {
 }
 
 .versionDetails ul li {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .versionDetailsCloseBtn {
@@ -1207,28 +1217,28 @@ hr {
 /* Last Read */
 
 .lastRead {
-  background: rgba(255, 255, 255, .2);
-  box-shadow: 0 1px 5px 0 rgba(255, 255, 255, .5);
-  font-size: .8rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 5px 0 rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
   margin-block: 5px;
   display: grid;
 }
 
-.lastRead>*:not(:last-child) {
+.lastRead > *:not(:last-child) {
   padding-inline: 5px;
 }
 
 .lastRead h5 {
   text-align: center;
-  box-shadow: 2px 0 1px 0 rgba(255, 255, 255, .1);
+  box-shadow: 2px 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .lastRead div {
   padding-left: 5px;
-  box-shadow: -2px 0 1px 0 rgba(255, 255, 255, .1);
+  box-shadow: -2px 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.lastRead h5+bdi {
+.lastRead h5 + bdi {
   white-space: nowrap;
   width: 20ch;
   overflow: hidden;
@@ -1236,13 +1246,11 @@ hr {
   text-align: right;
 }
 
-
 .lastRead .lastReadCloseBtn {
-  background: rgba(0, 0, 0, .15);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .15);
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
   padding-inline: 5px;
 }
-
 
 /* Check on removing bookmark items */
 .checkingEl {
@@ -1250,10 +1258,10 @@ hr {
   top: 0;
   right: 0;
   backdrop-filter: blur(20px) !important;
-  font-size: .7rem;
+  font-size: 0.7rem;
   border-radius: 5px;
-  background: rgba(255, 255, 255, .3);
-  animation: popIn .1s linear;
+  background: rgba(255, 255, 255, 0.3);
+  animation: popIn 0.1s linear;
 }
 
 .checkingEl h3 {
@@ -1261,9 +1269,9 @@ hr {
 }
 
 .checkingEl div {
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .2);
+  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 @keyframes popIn {
@@ -1278,10 +1286,8 @@ hr {
   }
 }
 
-
 @media (min-width: 500px) {
   .quranResult {
     max-height: 75vh;
   }
-
 }
